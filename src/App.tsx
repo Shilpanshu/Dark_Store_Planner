@@ -16,7 +16,7 @@ export default function App() {
   const [circles, setCircles] = useState<RadiusCircle[]>([]);
   const [analyses, setAnalyses] = useState<PinAnalysis[]>([]);
   const [apiKey, setApiKey] = useState(
-    () => import.meta.env.VITE_GEMINI_API_KEY ?? ""
+    () => (import.meta as any).env.VITE_GEMINI_API_KEY ?? ""
   );
 
   const center = CITIES[selectedCity] as [number, number];
